@@ -32,12 +32,12 @@ public class Assignment2 {
      * Method that takes the data from initializeData() and displays it to the screen.
      */
     public static void displayData() {
-        System.out.printf("%-8s %-10s %-10s %-10s%n", "Student", "Course 1", "Course 2", "Course 3", "Course 4", "Course 5");
+        System.out.printf("%-8s %-10s %-10s %-10s %-10s %-10s %n", "Student", "Course 1", "Course 2", "Course 3", "Course 4", "Course 5");
         
         for(int i = 0; i<students.length; i++) {
-            System.out.print(students[i]);
-            for(int j = 0; j<grades.length; j++) {
-                System.out.print(grades[i][j] + "   ");
+            System.out.printf("%-9s",students[i]);
+            for(int j = 0; j<=grades.length; j++) {
+                System.out.printf("%-11.1f",grades[i][j]);
             }
             System.out.println("");
         }
@@ -47,7 +47,8 @@ public class Assignment2 {
      * Method that will calculate what student has the highest overall average and display it to the screen.
      */
     public static void highestAvg() {
-        
+        //double student1Avg = (grades[0][0] + grades[0][1] + grades[0][2] + grades[0][3]) / 5;
+        //System.out.println(student1Avg);
     }
     
     /**
