@@ -80,14 +80,20 @@ public class Assignment2 {
             highestAvgStudent = students[4];
         }
         
-        System.out.printf("The student with the highest average (%.1f) is %s%n", highestAvg, highestAvgStudent);
+        System.out.printf("The student with the highest average (%.1f%%) is %s%n", highestAvg, highestAvgStudent);
     }
     
     /**
-     * Method that will calculate which student(s)' overall average is below 50% and display it to the screen.
+     * Method that will display students have have an overall average below 50%.
      */
     public static void below50Avg() {
-        
+        for (int i=1; i<studentsAvg.length; i++)
+        {
+            if (studentsAvg[i]<50)
+            {
+                System.out.printf("We are concerned with %s who has an average of %.1f%%%n", students[i],studentsAvg[i]);
+            }
+        }
     }
     
 }
