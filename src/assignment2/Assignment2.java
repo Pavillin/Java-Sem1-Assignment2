@@ -9,6 +9,12 @@ public class Assignment2 {
     //declare arrays so all methods can call them
     private static String[] students;
     private static double[][] grades;
+    //declare average variables so all methods can call them
+    private static double student1Avg;
+    private static double student2Avg;
+    private static double student3Avg;
+    private static double student4Avg;
+    private static double student5Avg;
     
     public static void main(String[] args) {
         initializeData();
@@ -22,10 +28,10 @@ public class Assignment2 {
      */
     public static void initializeData() {
         //Give students array some values
-        students = new String[] {"James", "Luke", "Alex", "Jenny"};
+        students = new String[] {"James", "Luke", "Alex", "Jenny","Blake"};
         
         //give 2D grades array some values
-        grades = new double[][] {{98, 72, 85, 77, 90},{25,49,26,77,60},{13,8,46,52,28},{77,81,85,69,88}}; 
+        grades = new double[][] {{98, 72, 85, 77, 90},{25,49,26,77,60},{13,8,46,52,28},{77,81,85,69,88},{48,55,64,77,52}}; 
     }
     
     /**
@@ -36,7 +42,7 @@ public class Assignment2 {
         
         for(int i = 0; i<students.length; i++) {
             System.out.printf("%-9s",students[i]);
-            for(int j = 0; j<=grades.length; j++) {
+            for(int j = 0; j<grades.length; j++) {
                 System.out.printf("%-11.1f",grades[i][j]);
             }
             System.out.println("");
@@ -47,8 +53,11 @@ public class Assignment2 {
      * Method that will calculate what student has the highest overall average and display it to the screen.
      */
     public static void highestAvg() {
-        //double student1Avg = (grades[0][0] + grades[0][1] + grades[0][2] + grades[0][3]) / 5;
-        //System.out.println(student1Avg);
+        student1Avg = (grades[0][0] + grades[0][1] + grades[0][2] + grades[0][3]) / 5;
+        student2Avg = (grades[1][0] + grades[1][1] + grades[1][2] + grades[1][3]) / 5;
+        student3Avg = (grades[2][0] + grades[2][1] + grades[2][2] + grades[2][3]) / 5;
+        student4Avg = (grades[3][0] + grades[3][1] + grades[3][2] + grades[3][3]) / 5;
+        student5Avg = (grades[4][0] + grades[4][1] + grades[4][2] + grades[4][3]) / 5;
     }
     
     /**
