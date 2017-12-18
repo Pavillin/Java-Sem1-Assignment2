@@ -14,6 +14,7 @@ public class Assignment2 {
     public static void main(String[] args) {
         initializeData();
         displayData();
+        avgCalc();
         highestAvg();
         below50Avg();
     }
@@ -45,17 +46,20 @@ public class Assignment2 {
     }
     
     /**
+     * Method that will calculate student averages
+     */
+    public static void avgCalc() {
+        studentsAvg = new double[] {(grades[0][0] + grades[0][1] + grades[0][2] + grades[0][3] + grades[0][4]) / 5,
+                                    (grades[1][0] + grades[1][1] + grades[1][2] + grades[1][3] + grades[1][4]) / 5,
+                                    (grades[2][0] + grades[2][1] + grades[2][2] + grades[2][3] + grades[2][4]) / 5,
+                                    (grades[3][0] + grades[3][1] + grades[3][2] + grades[3][3] + grades[3][4]) / 5,
+                                    (grades[4][0] + grades[4][1] + grades[4][2] + grades[4][3] + grades[4][4]) / 5};
+    }
+    
+    /**
      * Method that will calculate what student has the highest overall average and display it to the screen.
      */
-    public static void highestAvg() {
-        double student1Avg = (grades[0][0] + grades[0][1] + grades[0][2] + grades[0][3] + grades[0][4]) / 5;
-        double student2Avg = (grades[1][0] + grades[1][1] + grades[1][2] + grades[1][3] + grades[1][4]) / 5;
-        double student3Avg = (grades[2][0] + grades[2][1] + grades[2][2] + grades[2][3] + grades[2][4]) / 5;
-        double student4Avg = (grades[3][0] + grades[3][1] + grades[3][2] + grades[3][3] + grades[3][4]) / 5;
-        double student5Avg = (grades[4][0] + grades[4][1] + grades[4][2] + grades[4][3] + grades[4][4]) / 5;
-        
-        studentsAvg = new double[] {student1Avg, student2Avg, student3Avg, student4Avg, student5Avg};
-        
+    public static void highestAvg() {     
         double highestAvg = studentsAvg[0];
         
         for (int i=1; i<studentsAvg.length; i++)
@@ -68,13 +72,13 @@ public class Assignment2 {
         
         String highestAvgStudent;
         
-        if(highestAvg == student1Avg) {
+        if(highestAvg == studentsAvg[0]) {
             highestAvgStudent = students[0];
-        } else if(highestAvg == student2Avg) {
+        } else if(highestAvg == studentsAvg[1]) {
             highestAvgStudent = students[1];
-        } else if(highestAvg == student3Avg) {
+        } else if(highestAvg == studentsAvg[2]) {
             highestAvgStudent = students[2];
-        } else if(highestAvg == student4Avg) {
+        } else if(highestAvg == studentsAvg[3]) {
             highestAvgStudent = students[3];
         } else {
             highestAvgStudent = students[4];
